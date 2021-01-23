@@ -8,7 +8,7 @@ cryptoClient = discord.Client()
 
 
 def get_btc_pln():
-  cryptourlbtc = 'https://coinlib.io/api/v1/coin?key=6e642f02665c6e3e&pref=PLN&symbol=BTC'
+  cryptourlbtc = 'https://coinlib.io/api/v1/coin?key=XXX&pref=PLN&symbol=BTC'
   response = requests.get(cryptourlbtc)
   json_data = json.loads(response.text)
   price = json_data["price"]
@@ -16,7 +16,7 @@ def get_btc_pln():
   return crcurpln
 
 def get_eth_pln():
-  cryptourleth = 'https://coinlib.io/api/v1/coin?key=6e642f02665c6e3e&pref=PLN&symbol=ETH'
+  cryptourleth = 'https://coinlib.io/api/v1/coin?key=XXX&pref=PLN&symbol=ETH'
   response = requests.get(cryptourleth)
   json_data = json.loads(response.text)
   price = json_data["price"]
@@ -24,7 +24,7 @@ def get_eth_pln():
   return crcurpln  
 
 def get_ltc_pln():
-  cryptourlltc = 'https://coinlib.io/api/v1/coin?key=6e642f02665c6e3e&pref=PLN&symbol=LTC'
+  cryptourlltc = 'https://coinlib.io/api/v1/coin?key=XXX&pref=PLN&symbol=LTC'
   response = requests.get(cryptourlltc)
   json_data = json.loads(response.text)
   price = json_data["price"]
@@ -32,7 +32,7 @@ def get_ltc_pln():
   return crcurpln  
     
 def get_btc_usd():
-  response = requests.get('https://coinlib.io/api/v1/coin?key=6e642f02665c6e3e&pref=USD&symbol=BTC')
+  response = requests.get('https://coinlib.io/api/v1/coin?key=XXX&pref=USD&symbol=BTC')
   json_data = json.loads(response.text)
   price = json_data["price"]
   crcurusd = "Bitcoin price in PLN: " + re.sub(r'^(\d+\.\d{,2})\d*$',r'\1',str(price))
