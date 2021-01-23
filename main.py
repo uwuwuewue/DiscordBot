@@ -68,12 +68,3 @@ async def on_message(message):
 
 
 cryptoClient.run(os.getenv('TOKEN'))
-
-@bot.command()
-async def plot_test(ctx, *args):
-    x = args
-    image = discord.File("test.png")
-    plt.bar(np.arange(len(x)), x)
-    plt.savefig("test.png")
-    plt.close()
-    await ctx.send(file=image)
