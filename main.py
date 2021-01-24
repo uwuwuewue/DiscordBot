@@ -9,7 +9,7 @@ cryptoClient = discord.Client()
 apikey = 'APIKEY'
 
 def get_btc_pln():
-  cryptourlbtc = f'https://coinlib.io/api/v1/coin?key=XXX&pref=PLN&symbol=BTC'
+  cryptourlbtc = 'https://coinlib.io/api/v1/coin?key=XXX&pref=PLN&symbol=BTC'
   response = requests.get(cryptourlbtc)
   json_data = json.loads(response.text)
   price = json_data["price"]
