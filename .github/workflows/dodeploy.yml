@@ -27,4 +27,4 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         PASSWORD: ${{ secrets.PASSPHRASE }}
-        script: cat /opt/discordbot/main.py
+        script: cat ~/discordbot/main.py
