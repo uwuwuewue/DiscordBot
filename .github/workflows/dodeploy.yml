@@ -12,20 +12,21 @@ jobs:
 
     - name: Copy file via scp
       uses: appleboy/scp-action@master
-      env:
+      with:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
-      with:
+        PASSPHRASE: ${{ secrets.PASSPHRASE }}
         source: "."
-        target: "/opt/discordbot"
+        target: "~/discordbot"
 
     - name: Executing remote  command
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
+        HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
+        PASSPHRASE: ${{ secrets.PASSPHRASE }}
         script: cat /opt/discordbot/main.py
