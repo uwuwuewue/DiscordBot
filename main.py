@@ -67,9 +67,5 @@ async def on_message(message):
     crcurpln = get_ltc_pln()
     await message.channel.send(crcurpln)
 
-  if (message.content.startswith('$btcusd')):
-    crcurusd = get_btc_usd()
-    await message.channel.send(crcurusd)  
-
 
 cryptoClient.run(os.getenv('TOKEN'))
